@@ -1,0 +1,9 @@
+- name: set timezone to Asia/Tokyo
+  timezone:
+    name: Asia/Tokyo
+
+- name: install chrony
+  yum: name=chrony state=latest
+
+- name: chrony start and enable
+  service: name=chronyd state=started enabled=yes

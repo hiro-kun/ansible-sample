@@ -1,0 +1,8 @@
+- name: download golang
+  get_url: url=https://dl.google.com/go/{{ go_package_name }}  dest=/usr/local/src/
+
+- name: unarchive golang source
+  unarchive:
+      src: /usr/local/src/{{ go_package_name }}
+      dest: /usr/local/src/
+      remote_src: yes
